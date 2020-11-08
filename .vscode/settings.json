@@ -5,7 +5,14 @@
         "editor.formatOnPaste": false,
         "editor.suggestSelection": "recentlyUsedByPrefix",
         "editor.formatOnSave": false,
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.comments.insertSpace": true,
+        "editor.insertSpaces": true
+    },
+    "[bibtex]": {
+      "editor.formatOnSave": false,
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true
     },
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.chktex.path": "C:\\Program Files\\MiKTeX\\miktex\\bin\\x64\\chktex.exe",
