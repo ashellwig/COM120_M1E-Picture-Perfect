@@ -1,6 +1,4 @@
-$latexmk_exe = 'C:\Program Files\MiKTeX\miktex\bin\x64\latexmk.exe'
-$latexmk_params = '-pdf -pdflatex="pdflatex -interaction=nonstopmode"'
-$m1e_path = 'C:\Users\hellw\OneDrive - Colorado Community College System\COM120\Essays\Module-1\M1E_Picture-Perfect'
+$m1e_path = "C:\Users\hellw\OneDrive - Colorado Community College System\COM120\Essays\Module-1\M1E_Picture-Perfect"
 
 Write-Host 'Cleaning LaTeX Project'
 Remove-Item "$m1e_path\*_temp.tex"
@@ -38,7 +36,7 @@ Remove-Item "$m1e_path\*.run.xml"
 Remove-Item "$m1e_path\*.pdf"
 
 Write-Host 'Building LaTeX Project'
-Invoke-Expression "$latexmk_exe $latexmk_params"
+& 'C:\Program Files\MiKTeX\miktex\bin\x64\latexmk.exe' '-pdf' '-pdflatex="pdflatex -interaction=nonstopmode"'
 
 Write-Host 'Moving File to out/ASHELLWIG_M1E_Picture-Perfect.pdf'
 Move-Item -Path "$m1e_path\main.pdf" -Destination "$m1e_path\out\ASHELLWIG_M1E_Picture-Perfect.pdf"
